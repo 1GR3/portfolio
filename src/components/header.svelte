@@ -1,5 +1,11 @@
 <script>
-	// import '../js/canvas.js';
+	import { onMount } from 'svelte';
+	import { initCanvasAnimation } from '../js/canvas.js';
+
+	onMount(() => {
+		const { init } = initCanvasAnimation();
+		init(); // Call the init function directly
+	});
 </script>
 
 <header class="container-fluid px-0">
@@ -23,4 +29,22 @@
 <canvas id="canvas" class="w-100" />
 
 <style lang="scss">
+	header {
+		background-image: linear-gradient(180deg, #88d5de, #caeaee);
+		color: #077b8a;
+	}
+
+	header h1 {
+		line-height: 0.69 !important;
+		letter-spacing: -1.5px;
+		font-weight: 900 !important;
+		font-size: 5rem;
+		margin-bottom: 1.5rem;
+		color: white;
+		text-shadow: 0 2px 2px rgba(7, 123, 138, 0.25);
+	}
+
+	header h1 small {
+		font-size: 80%;
+	}
 </style>
