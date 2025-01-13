@@ -1,5 +1,5 @@
 export function initCanvasAnimation() {
-    const waveHeight = 150;
+    const waveHeight = 50;
     const colours = ["#fff", "#CAEAEE"];
     const canvasId = "canvas"; // Single canvas id
     let waves = [];
